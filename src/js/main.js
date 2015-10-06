@@ -32,11 +32,8 @@ require([
     stories.fetch({
         error: showError
     }).done(function(){
-       success: function() {
-        console.log('fetched data ok');
-       },
-       error: function() {
-        console.log('error fetching data');
-       }
+        tasks.fetch({
+            error: showError
+        });
     });
 });

@@ -8,21 +8,14 @@ require.config({
         "handlebars": "../bower_components/handlebars/handlebars.min",
         "requirejs": "../bower_components/requirejs/require",
         "text": "../bower_components/requirejs-text/text",
-    
+
         // constants
         "constants": "js/constants/modelViewConstants",
 
         // components
         "storiesCollection": "js/collections/stories",
         "storyModel": "js/models/story",
-        "storyView": "js/views/story",
-        "tasksCollection": "js/collections/tasks",
-        "taskModel": "js/models/task",
-        "taskView": "js/views/task",
-        "editStoryModel": "js/models/edit-story",
-        "editStoryView": "js/views/edit-story",
-        "editTaskModel": "js/models/edit-task",
-        "editTaskView": "js/views/edit-task"
+        "storyView": "js/views/story"
      },
 
     deps: [

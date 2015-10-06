@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             }
         },
         
-        /*
+
         connect: {
             server: {
               options: {
@@ -25,9 +25,17 @@ module.exports = function(grunt) {
                     target: 'http://localhost:9000/html'
                 }
               }
+            },
+            jasmine: {
+              options: {
+                port: 8000,
+                open: {
+                    target: 'http://localhost:8000/_SpecRunner.html'
+                }
+              }
             }
         },
-        */
+
 
         sass: {
             options: {
@@ -89,6 +97,24 @@ module.exports = function(grunt) {
                     jQuery: true
                 },
             }
+        },
+
+        jasmine: {
+            yourTask: {
+                options: {
+                    src: 'src/js/**/*.js',
+                    specs: 'src/js/**/tests/*spec.js',
+                    host: 'http://localhost:8000/',
+                    template: require('grunt-template-jasmine-requirejs'),
+                    keepRunner: true,
+                    templateOptions: {
+                        requireConfigFile: 'src/js/config.js',
+                        requireConfig: {
+                            baseUrl: 'src'
+                        }
+                    }
+                }
+            }
         }
     });
 
@@ -98,6 +124,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-jasmine');
 
     grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'copy', 'watch'/*, 'connect' */]);
     grunt.registerTask('deploy', ['jshint', 'requirejs', 'sass', 'copy']);

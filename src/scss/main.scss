@@ -7,14 +7,14 @@
 }
 
 body {
-	background-color: #34495E;
+	background-color: $main-bg;
 	font-family: Helvetica, Arial, sans-serif;
-	
+
 	@include medium-up {
-		background-color: red;
+		background-color: $red;
 	}
 
 	@include large-up {
-		background-color: green;
+		background-color: $green;
 	}
 }
