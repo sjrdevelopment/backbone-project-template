@@ -23,5 +23,10 @@ require([
 
     Backbone.history.start();
 
-
+    var newView = new StoryView({
+        model: new StoryModel({
+            itemName: 'stu'
+        })
+    });
+    newView.render();
 });
