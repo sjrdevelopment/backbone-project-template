@@ -20,19 +20,12 @@ define(
                 addStoryButton: '.add-story-button'
             },
 
-            story: {
+            basic: {
                 properties: {
-                    apiUrl: '/v1/stories',
-                    idAttribute: 'id',
-                    priority: 'priority',
-                    isp1: 'isp1',
-                    isp2: 'isp2',
-                    isp3: 'isp3',
-                    persona: 'persona',
-                    feature: 'feature'
+                    apiUrl: ''
                 },
                 cssClasses: {
-                    storyRow: 'story-row'
+                    container: 'container'
                 }
             }
         };

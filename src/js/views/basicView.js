@@ -2,7 +2,7 @@ define([
     'jquery',
     'backbone',
     'handlebars',
-    'text!hbs/story-template.hbs',
+    'text!hbs/basicTemplate.hbs',
     'constants'
 ],function(
     $,
@@ -15,16 +15,16 @@ define([
     var GENERIC_CLASSES = constants.genericClasses,
         GENERIC_EVENTS = constants.genericEvents,
         GENERIC_SELECTORS = constants.genericSelectors,
-        CSS_CLASSES = constants.story.cssClasses,
-        PROPERTIES = constants.story.properties,
-        storyView,
+        CSS_CLASSES = constants.basic.cssClasses,
+        PROPERTIES = constants.basic.properties,
+        BasicView,
         $html,
         $body;
 
-    storyView = Backbone.View.extend({
+    BasicView = Backbone.View.extend({
         tagName: 'div',
 
-        className: CSS_CLASSES.storyRow,
+        className: CSS_CLASSES.container,
 
         events: {
             'click .action': 'onAction',
@@ -36,7 +36,7 @@ define([
 
             this.listenTo(this.model.on('change', this.render.bind(this)));
             this.listenTo(this.model.on('destroy', _.bind(this.removeView, this)));
-            this.model.on('change', _.bind(this.render, this));
+
         },
 
         removeView: function() {
@@ -58,6 +58,6 @@ define([
 
     });
 
-  return storyView;
+  return BasicView;
 
 });

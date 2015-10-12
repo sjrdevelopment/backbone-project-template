@@ -2,20 +2,20 @@ define(
     [
         'backbone',
         'constants',
-        'storyModel',
-        'storyView'
+        'basicModel',
+        'basicView'
     ],
     function (
         Backbone,
         constants,
-        StoryModel,
-        StoryView
+        BasicModel,
+        BasicView
     ) {
         'use strict';
 
-        var PROPERTIES = constants.story.properties;
+        var PROPERTIES = constants.basic.properties;
 
-        describe('Story view', function() {
+        describe('Basic view', function() {
            var view;
 
             describe('On initialize', function() {

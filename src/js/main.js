@@ -1,16 +1,16 @@
 require([
     'jquery',
     'backbone',
-    'storyView',
-    'storyModel',
-    'storiesCollection',
+    'basicView',
+    'basicModel',
+    'basicCollection',
     'constants'
 ], function (
     $,
     Backbone,
-    StoryView,
-    StoryModel,
-    StoriesCollection,
+    BasicView,
+    BasicModel,
+    BasicCollection,
     constants
 ) {
     var stories,
@@ -23,8 +23,8 @@ require([
 
     Backbone.history.start();
 
-    var newView = new StoryView({
-        model: new StoryModel({
+    var newView = new BasicView({
+        model: new BasicModel({
             itemName: 'stu'
         })
     });

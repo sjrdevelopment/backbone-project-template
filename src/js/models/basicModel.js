@@ -1,9 +1,9 @@
 define(['backbone', 'constants'], function(Backbone, constants) {
 
-    var PROPERTIES = constants.story.properties,
-        storyModel;
+    var PROPERTIES = constants.basic.properties,
+        BasicModel;
 
-    storyModel = Backbone.Model.extend({
+    BasicModel = Backbone.Model.extend({
 
         initialize: function(attr, options) {
 
@@ -11,5 +11,5 @@ define(['backbone', 'constants'], function(Backbone, constants) {
 
     });
 
-    return storyModel;
+    return BasicModel;
 });

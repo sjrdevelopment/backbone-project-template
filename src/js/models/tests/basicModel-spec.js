@@ -2,28 +2,28 @@ define(
     [
         'backbone',
         'constants',
-        'storiesCollection'
+        'basicModel'
     ],
     function (
         Backbone,
         constants,
-        StoriesCollection
+        BasicModel
     ) {
         'use strict';
 
-        var PROPERTIES = constants.story.properties;
+        var PROPERTIES = constants.basic.properties;
 
-        describe('Story collection', function() {
-           var collection;
+        describe('Basic model', function() {
+           var model;
 
             describe('On initialize', function() {
 
                 beforeEach(function() {
-                    collection = new StoriesCollection();
+                    model = new BasicModel()
                 });
 
                 it('should inherit from Backbone.Model', function() {
-                    expect(collection instanceof Backbone.Collection).toBe(true);
+                    expect(model instanceof Backbone.Model).toBe(true);
                 });
             });
         });

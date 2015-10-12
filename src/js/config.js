@@ -13,9 +13,9 @@ require.config({
         "constants": "js/constants/modelViewConstants",
 
         // components
-        "storiesCollection": "js/collections/stories",
-        "storyModel": "js/models/story",
-        "storyView": "js/views/story"
+        "basicCollection": "js/collections/basicCollection",
+        "basicModel": "js/models/basicModel",
+        "basicView": "js/views/basicView"
      },
 
     deps: [

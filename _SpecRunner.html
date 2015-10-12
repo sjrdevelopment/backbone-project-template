@@ -52,9 +52,9 @@
     "requirejs": "../bower_components/requirejs/require",
     "text": "../bower_components/requirejs-text/text",
     "constants": "js/constants/modelViewConstants",
-    "storiesCollection": "js/collections/stories",
-    "storyModel": "js/models/story",
-    "storyView": "js/views/story"
+    "basicCollection": "js/collections/basicCollection",
+    "basicModel": "js/models/basicModel",
+    "basicView": "js/views/basicView"
   },
   "deps": [
     "jquery"
@@ -86,7 +86,7 @@
       
     ],
     function(){
-      require(['src/js/collections/tests/stories-spec.js','src/js/models/tests/story-spec.js','src/js/views/tests/story-spec.js','.grunt/grunt-contrib-jasmine/reporter.js'], function(){
+      require(['src/js/collections/tests/basicCollection-spec.js','src/js/models/tests/basicModel-spec.js','src/js/views/tests/basicView-spec.js','.grunt/grunt-contrib-jasmine/reporter.js'], function(){
         startTests();
       });
     }
