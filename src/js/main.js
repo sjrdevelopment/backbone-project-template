@@ -23,17 +23,5 @@ require([
 
     Backbone.history.start();
 
-    stories = new StoriesCollection();
 
-    showError = function(error) {
-        console.log(error);
-    };
-
-    stories.fetch({
-        error: showError
-    }).done(function(){
-        tasks.fetch({
-            error: showError
-        });
-    });
 });

@@ -20,9 +20,9 @@ module.exports = function(grunt) {
             server: {
               options: {
                 port: 9000,
-                base: 'public',
+                base: 'api/public',
                 open: {
-                    target: 'http://localhost:9000/html'
+                    target: 'http://localhost:9000'
                 }
               }
             },
@@ -126,6 +126,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-    grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'copy', 'watch'/*, 'connect' */]);
+    grunt.registerTask('default', ['jshint', 'requirejs', 'sass', 'copy', 'connect:server', 'watch']);
+    grunt.registerTask('test', ['jshint', 'connect:jasmine', 'jasmine']);
     grunt.registerTask('deploy', ['jshint', 'requirejs', 'sass', 'copy']);
 }
